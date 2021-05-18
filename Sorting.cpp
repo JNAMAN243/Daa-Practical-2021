@@ -122,15 +122,7 @@ void mergeSort(int a[],int i, int j ){
 		mergeSort(a,mid+1,j);	//right recursion
 		merge(a,i,mid,mid+1,j,n);	//merging of two sorted sub-arrays
 	}
-	else
-	{
-		cout<<"\nsorted array is:\n";
-	for(int i=0;i<n;i++)
-	{
-		cout<<" "<<a[i];
-	}
-	cout<<"\nTotal number of comparisons are: "<<comp;
-	}
+	
 }
 int partition(int a[],int l,int u)
 {
@@ -167,12 +159,7 @@ void quickSort(int a[],int i,int j)
 	quickSort(a,i, mid-1);
 	quickSort(a,mid+1,j);	
 	}
-	cout<<"\nsorted array is:\n";
-	for(int i=0;i<n;i++)
-	{
-		cout<<" "<<a[i];
-	}
-	cout<<"\nTotal number of comparisons are: "<<comp;
+	
 }
 int main(){
 	int ar[30],ch,n;
@@ -201,9 +188,21 @@ int main(){
     		break;
     	case 4:
     		mergeSort(ar,0,n-1);
+    		cout<<"\nsorted array is:\n";
+	for(int i=0;i<n;i++)
+	{
+		cout<<" "<<ar[i];
+	}
+	cout<<"\nTotal number of comparisons are: "<<comp;
     		break;
     	case 5:
     		quickSort(ar,0,n-1);
+    		cout<<"\nsorted array is:\n";
+	for(int i=0;i<n;i++)
+	{
+		cout<<" "<<ar[i];
+	}
+	cout<<"\nTotal number of comparisons are: "<<comp;
     		break;
     	default: cout<<"Wrong choice ";
 	}
